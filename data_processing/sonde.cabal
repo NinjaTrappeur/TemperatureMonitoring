@@ -1,0 +1,25 @@
+name:                sonde
+version:             0.1.0.0
+-- synopsis:
+-- description:
+license:             BSD3
+author:              Félix Baylac-Jacqué
+copyright:           2017 Félix Baylac-Jacqué
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable sonde-temp
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  other-modules:       Const
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , serialport
+                     , bytestring
+                     , sqlite
+                     , time
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/sonde
